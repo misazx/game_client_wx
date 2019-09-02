@@ -1,0 +1,13 @@
+.stepper-box {
+  background-color: whitesmoke;
+  display: flex;
+  width: 88px;
+  height: 44px;
+  line-height: 44px;
+}
+.stepper-button {
+  width: 50%;
+  height: 100%;
+  background-color: #FF895D;
+  text-align: center;
+}

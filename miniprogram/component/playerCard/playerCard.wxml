@@ -1,0 +1,8 @@
+<view class="{{showFront ? 'card front' : 'card back'}}" bindtap="onTap">
+  <view wx:if="{{showFront}}">
+    {{word}}
+  </view>
+  <view wx:if="{{!showFront}}">
+    {{myNumber}}
+  </view>
+</view>

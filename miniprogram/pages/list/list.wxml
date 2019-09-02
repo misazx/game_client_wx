@@ -1,0 +1,10 @@
+<view class="item" wx:for="{{gameList}}" bindtap="pushToNextPage" data-index="{{index}}">
+  {{gameList[index]}}
+</view>
+
+<view class="item alert" wx:if="{{showAlert}}">
+  正在开发 敬请期待
+</view>
+
+
+

@@ -1,0 +1,49 @@
+<view class="box">
+  <view class="title">
+    总人数: {{player}}
+  </view>
+  <stepper class="stepper" bind:valueDidChange="_updatePlayerCount" value="{{player}}">
+  </stepper>
+</view>
+<view class="box">
+  <view class="title">卧底: {{ghost}}</view>
+  <stepper class="stepper" bind:valueDidChange="_updateGhostCount">
+  </stepper>
+</view>
+
+<view class="box">
+  <view class="title">空白: {{empty}}</view>
+  <stepper class="stepper" bind:valueDidChange="_updateEmptyCount"></stepper>
+</view>
+
+<view class="system-word-cell">
+  <view>系统出题</view>
+  <switch bindchange="_needSystemWord" color='#FF895D'></switch>
+</view>
+
+<view class='word-input' wx:if="{{!isSystemWord}}">
+  <view>好人词: </view>
+  <input placeholder="请输入好人词" bindinput="_updateGoodWord" ></input>
+</view>
+
+<view class='word-input' wx:if="{{!isSystemWord}}">
+  <view>坏人词: </view>
+  <input placeholder="请输入卧底词" bindinput="_updateGhostWord" ></input>
+</view>
+
+<picker class="system-word-picker" bindchange="_chooseSystemWordType" value="{{index}}" range="{{systemWordType}}" wx:if="{{isSystemWord}}">
+  <view>{{systemWord}}</view>
+</picker>
+<view class='bottom-button' bindtap="_jumpToGamePage">开始游戏</view>
+
+<view class="rule">
+  <view>
+    空白胜利条件: 卧底全部出局
+  </view>
+  <view>
+    卧底胜利条件: 好人全部出局
+  </view>
+  <view>
+    好人胜利条件: 空白卧底全部出局
+  </view>
+</view>

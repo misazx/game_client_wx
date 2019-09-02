@@ -1,0 +1,67 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 44px;
+  background-color: #F8B195;
+  font-size: 22px;
+  padding-left: 10px;
+}
+.title {
+  width: 50%;
+  height: 44px;
+  line-height: 44px;
+}
+.word-input {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 44px;
+  background-color: #F8B195;
+  font-size: 22px;
+  padding-left: 10px;
+  line-height: 44px;  
+}
+input {
+  padding-left: 10px;
+  width: 150px;
+  height: 44px;
+}
+.system-word-cell {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F8B195;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 22px;
+  padding-left: 10px;
+}
+.system-word-picker {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #F8B195;
+}
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  width:  100%;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  background-color: #F8B195;
+  font-size: 33px;
+}
+.rule {
+  margin-top: 10px;
+  color: red;
+  background-color: #F8B195;
+  width: 100%;
+  line-height: 33px;
+  text-align: center;
+  font-size: 22px;
+}

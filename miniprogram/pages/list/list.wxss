@@ -1,0 +1,14 @@
+.item { 
+  background-color: skyblue;
+  width: 90%;
+  height: 88px;
+  margin: 5%;
+  line-height: 88px;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 33px;
+}
+.alert {
+  background-color: whitesmoke;
+  color: red;
+}

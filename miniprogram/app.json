@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/game/whoIsGhost/config/config",
+    "pages/game/whoIsGhost/game/game",
+    "pages/game/whoIsGhost/lobby/lobby",
+    
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1B435D",
+    "navigationBarTitleText": "谁是卧底",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  }
+}

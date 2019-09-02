@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "player-card": "../../../../component/playerCard/playerCard"
+  }
+}

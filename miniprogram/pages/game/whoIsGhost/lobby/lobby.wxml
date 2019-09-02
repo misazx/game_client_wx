@@ -1,0 +1,4 @@
+<!--pages/game/whoIsGhost/lobby/lobby.wxml-->
+<view class="item" wx:for="{{roomList}}" bindtap="onClickRoom" data-index="{{index}}">
+  {{roomList[index]}}
+</view>

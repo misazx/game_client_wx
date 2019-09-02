@@ -1,0 +1,29 @@
+.player-box {
+  padding-bottom: 5px;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+}
+.result-card {
+  width: 30%;
+  height: 100px;
+  line-height: 100px;
+  background-color: papayawhip;
+  text-align: center;
+  margin: 1.5%;
+  border-radius: 8px;
+}
+.alert {
+  width: 90%;
+  height: 88px;
+  margin: 5%;
+  line-height: 88px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  color: red;
+}

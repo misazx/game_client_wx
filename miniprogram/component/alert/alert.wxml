@@ -1,0 +1,5 @@
+<view>
+  <view>{{title}}</view>
+  <view>{{content}}</view>
+  <view>确认</view>
+</view>

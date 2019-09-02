@@ -1,0 +1,4 @@
+<view class="stepper-box">
+  <view class="stepper-button" bindtap="addValue">+</view>
+  <view class="stepper-button" bindtap="subtractValue">-</view>
+</view>

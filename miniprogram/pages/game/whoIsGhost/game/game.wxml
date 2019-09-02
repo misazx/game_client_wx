@@ -1,0 +1,26 @@
+
+<view class="player-box">
+  <player-card wx:for="{{players}}"
+             wx:if="{{!isBeginGame}}"
+             myNumber="{{index+1}}" 
+             word="{{item.word}}"
+             bind:turnCard="showNextCard">
+</player-card>
+</view>
+
+
+<view class="box" wx:if="{{isBeginGame && !gameIsOver}}">
+  <view wx:for="{{players}}" class="result-card" bind:tap="checkGameResult" data-idx="{{index}}">
+        {{players[index].isOut ? "已出局" : (index+1)}}
+  </view>
+</view>
+
+<view class="alert" wx:if="{{isBeginGame}}">
+  {{gameResultText}}
+</view>
+
+
+
+
+
+

@@ -17,8 +17,11 @@ Page({
       data:{
 
       },
-      complete:rst=>{
-        console.log('callFunction test result: ', rst)
+      success:rst=>{
+        console.log('callFunction test result: ', rst.result.data)
+        this.setData({
+          roomList: rst.result.data,
+        })
       }
     })
   },
@@ -75,6 +78,14 @@ Page({
   onClickRoom: function (e) {
     var index = e.target.dataset.index
 
-  }
+  },
+
+  onClickCreateRoom:function(e){
+    wx.cloud.callFunction({
+    name:'createRoom'}).then(rst=>{
+      console.log(rst)
+
+    })
+  },
 
 })

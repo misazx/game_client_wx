@@ -1,4 +1,8 @@
 <!--pages/game/whoIsGhost/lobby/lobby.wxml-->
 <view class="item" wx:for="{{roomList}}" bindtap="onClickRoom" data-index="{{index}}">
-  {{roomList[index]}}
+  {{roomList[index].name}}
+</view>
+
+<view class="item-create"  bindtap="onClickCreateRoom" >
+  创建房间
 </view>

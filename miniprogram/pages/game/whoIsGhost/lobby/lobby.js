@@ -1,4 +1,6 @@
 // pages/game/whoIsGhost/lobby/lobby.js
+var app = getApp();
+
 Page({
 
   /**
@@ -12,18 +14,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.callFunction({
-      name:'getRooms',
-      data:{
+    // wx.cloud.callFunction({
+    //   name:'getRooms',
+    //   data:{
 
-      },
-      success:rst=>{
-        console.log('callFunction test result: ', rst.result.data)
-        this.setData({
-          roomList: rst.result.data,
-        })
+    //   },
+    //   success:rst=>{
+    //     console.log('callFunction test result: ', rst.result.data)
+    //     this.setData({
+    //       roomList: rst.result.data,
+    //     })
+    //   }
+    // })
+    wx.httpReq({
+        url:'/whoisghost/lobby/list',
+        success:rst => {
+          console.log('/whoisghost/lobby/list: ', rst.data)
+          this.setData({
+            roomList: rst.data,
+          })
+        },
       }
-    })
+    )
   },
 
   /**
@@ -81,11 +93,21 @@ Page({
   },
 
   onClickCreateRoom:function(e){
-    wx.cloud.callFunction({
-    name:'createRoom'}).then(rst=>{
-      console.log(rst)
-
-    })
+    // wx.cloud.callFunction({
+    //   name: app.globalData.userInfo.nickName}).then(rst=>{
+    //   console.log(rst)
+    // })
+    wx.httpReq({
+      url:'/whoisghost/lobby/create', 
+      data:{
+        name: 'misakkz',//app.globalData.userInfo.nickName,
+      },
+      success: rst => {
+        console.log('/whoisghost/lobby/create: ', rst.data)
+        
+      },
+    }
+    )
   },
 
 })

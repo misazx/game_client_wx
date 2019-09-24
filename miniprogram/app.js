@@ -1,4 +1,7 @@
 //app.js
+require('./utils/v-request.js')
+require('./utils/http.js')
+
 App({
   onLaunch: function () {
     
@@ -42,12 +45,10 @@ App({
       }
     })
 
-    this.globalData = {}
+  },
 
-    globalData: {
-      userInfo: null
-    }
+  globalData: {
+    url: 'https://misakira.herokuapp.com',
   }
+  
 })
-
-let kGameConfig = "wx.qp.whoisghost.gameconfig"

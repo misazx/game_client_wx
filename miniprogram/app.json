@@ -10,7 +10,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1B435D",
-    "navigationBarTitleText": "谁是卧底",
+    "navigationBarTitleText": "Game",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": false
   }
